@@ -1,6 +1,7 @@
 package com.crosska.jobberdev
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -42,6 +43,7 @@ class SplashActivity : AppCompatActivity() {
 
     fun toastTest() {
         Toast.makeText(this, "Timer Out", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, SignInActivity::class.java))
     }
 
     fun loadingAnimation() {

@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
@@ -17,6 +18,8 @@ import java.util.Timer
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
+
+    var exiting = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,28 +31,35 @@ class SplashActivity : AppCompatActivity() {
             insets
         }
         loadingAnimation()
-        val timer = object : CountDownTimer(1500, 1000) {
+        val countdown = object : CountDownTimer(1200, 100) {
             override fun onTick(millisUntilFinished: Long) {
-
+                if (exiting) {
+                    cancel()
+                }
             }
 
             override fun onFinish() {
                 toastTest()
             }
         }
-        timer.start()
+        countdown.start()
 
     }
 
     fun toastTest() {
-        Toast.makeText(this, "Timer Out", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "Timer Out", Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, SignInActivity::class.java))
     }
 
     fun loadingAnimation() {
-        val imageLogo = findViewById<ImageView>(R.id.splash_activity_imageview_logo)
+        val imageLogo = findViewById<CardView>(R.id.splash_activity_card_logo)
         val anim = AnimationUtils.loadAnimation(this, R.anim.splash_logo)
         imageLogo.startAnimation(anim)
+    }
+
+    override fun onBackPressed() {
+        exiting = true
+        super.onBackPressed()
     }
 
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in_activity_error_no_login">Логин не может быть пустым</string>
+    <string name="sign_in_activity_error_no_password">Пароль не может быть пустым</string>
+    <string name="sign_in_activity_error_no_data">Пожалуйста, введите логин и пароль</string>
+    <string name="sign_up_activity_header">НОВЫЙ АККАУНТ ПОЛЬЗОВАТЕЛЯ</string>
+    <string name="sign_up_activity_preheader">Заполните ваши данные</string>
+    <string name="sign_up_activity_username_warning">Внимание, имя пользователя должно быть как минимум 4 символа длиной и уникальным</string>
+    <string name="sign_up_activity_username_hint">имя пользователя</string>
+    <string name="sign_up_activity_login_warning">Важно, чтобы логин был как минимум 4 символа в длину и содержать только латиницу и цифры</string>
+    <string name="sign_up_activity_login_hint">логин</string>
+    <string name="sign_up_activity_password_warning">Необходимо, чтобы пароль был от 8 символов длиной и может включать в себя только латиницу, цифры и спец. символы</string>
+    <string name="sign_up_activity_password_hint">пароль</string>
+    <string name="sign_up_activity_password_re_hint">повторите пароль</string>
+    <string name="sign_up_activity_cancel_button">Отмена</string>
+    <string name="sign_up_activity_register_button">Зарегистрироваться</string>
+    <string name="sign_up_activity_notifier_username_EMPTY">Имя пользователя не может быть пустым</string>
+    <string name="sign_up_activity_notifier_username_SHORT">Имя пользователя короткое</string>
+    <string name="sign_up_activity_notifier_username_EXIST">Такое имя уже существует</string>
+    <string name="sign_up_activity_notifier_username_GRANTED">Имя пользователя подходит</string>
+    <string name="sign_up_activity_notifier_login_EMPTY">Логин не может быть пустым</string>
+    <string name="sign_up_activity_notifier_login_SHORT">Логин короткий</string>
+    <string name="sign_up_activity_notifier_login_EXIST">Такой логин уже существует</string>
+    <string name="sign_up_activity_notifier_login_GRANTED">Логин подходит</string>
+    <string name="sign_up_activity_notifier_password_EMPTY">Пароль не может быть пустым</string>
+    <string name="sign_up_activity_notifier_password_SHORT">Пароль слишком короткий</string>
+    <string name="sign_up_activity_notifier_password_GRANTED">Пароль подходит</string>
+    <string name="sign_up_activity_notifier_password_NOTMATCHING">Пароли не совпадают</string>
+    <string name="sign_up_activity_notifier_password_GRANTED_MAIN">Повторите введенный пароль</string>
+    <string name="sign_in_activity_sign_up_button">Зарегистрироваться</string>
+    <string name="sign_in_activity_sign_in_button">Войти</string>
+    <string name="sign_in_activity_button_forgot">Забыли пароль?</string>
+</resources>

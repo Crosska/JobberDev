@@ -2,6 +2,7 @@ package com.crosska.jobberdev
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -17,6 +18,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import java.util.Locale
 
 class SignInActivity : AppCompatActivity() {
 
@@ -24,11 +26,11 @@ class SignInActivity : AppCompatActivity() {
     var errorShowing = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        setAppLocale(this, "English")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_in)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.sign_in_activity_main_view)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -73,6 +75,15 @@ class SignInActivity : AppCompatActivity() {
             // Не ввели ничего
             showError(getString(R.string.sign_in_activity_error_no_data), this)
         }
+    }
+
+    fun setAppLocale(context: Context, language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = context.resources.configuration
+        config.setLocale(locale)
+        context.createConfigurationContext(config)
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
     }
 
     private fun showError(error: String, context: Context) {
@@ -141,7 +152,8 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun signUpButtonPressed(view: View) {
-
+        val intent = Intent(this@SignInActivity, SignUpActivity::class.java)
+        startActivity(intent)
     }
 
     fun forgotPasswordButtonPressed(view: View) {
@@ -157,7 +169,8 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun Context.hideKeyboard(view: View) {
-        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        val inputMethodManager =
+            getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 

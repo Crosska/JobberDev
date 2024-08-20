@@ -1,6 +1,37 @@
 <resources>
-    <string name="app_name">Jobber</string>
-    <string name="sign_in_activity_error_no_login">Пожалуйста, укажите логин</string>
-    <string name="sign_in_activity_error_no_password">Пожалуйста, укажите пароль</string>
-    <string name="sign_in_activity_error_no_data">Пожалуйста, введите данные для входа</string>
+    <string name="app_name" translatable="false">Jobber</string>
+    <string name="sign_in_activity_error_no_login">Login can\'t be empty</string>
+    <string name="sign_in_activity_error_no_password">Password can\'t be empty</string>
+    <string name="sign_in_activity_error_no_data">Please, enter account login and password</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="sign_up_activity_header">NEW USER ACCOUNT</string>
+    <string name="sign_up_activity_preheader">Fill in your details</string>
+    <string name="sign_up_activity_username_warning">Remember, username length must be at least 4 characters length and free to use</string>
+    <string name="sign_up_activity_username_hint">username</string>
+    <string name="sign_up_activity_login_warning">It\'s important for login to be at least 4 characters length and written by latin symbols and digits</string>
+    <string name="sign_up_activity_login_hint">login</string>
+    <string name="sign_up_activity_password_warning">Please note, that the password must be at least 8 characters long and might include only latin letters, digits, and special symbols</string>
+    <string name="sign_up_activity_password_hint">password</string>
+    <string name="sign_up_activity_password_re_hint">repeat password</string>
+    <string name="sign_up_activity_cancel_button">Cancel</string>
+    <string name="sign_up_activity_register_button">Register</string>
+    <string name="sign_up_activity_notifier_username_EMPTY">Username can\'t be empty</string>
+    <string name="sign_up_activity_notifier_username_SHORT">Username is too short</string>
+    <string name="sign_up_activity_notifier_username_EXIST">This username exist\'s already</string>
+    <string name="sign_up_activity_notifier_username_GRANTED">Username is acceptable</string>
+    <string name="sign_up_activity_notifier_login_EMPTY">Login can\'t be empty</string>
+    <string name="sign_up_activity_notifier_login_SHORT">Login is too short</string>
+    <string name="sign_up_activity_notifier_login_EXIST">This login exist\'s already</string>
+    <string name="sign_up_activity_notifier_login_GRANTED">Login is acceptable</string>
+    <string name="sign_up_activity_notifier_password_EMPTY">Password can\'t be empty</string>
+    <string name="sign_up_activity_notifier_password_SHORT">Password is too short</string>
+    <string name="sign_up_activity_notifier_password_GRANTED">Password is acceptable</string>
+    <string name="sign_up_activity_notifier_password_NOTMATCHING">Passwords are not matching</string>
+    <string name="sign_up_activity_notifier_password_GRANTED_MAIN">Repeat your password for confidence</string>
+    <string name="allowed_characters_username" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_абвгдеёжзийклмнопрстуфхцчшыьщъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЫЬЪЩЭЮЯ</string>
+    <string name="allowed_characters_login" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_</string>
+    <string name="allowed_characters_password" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^*()_-=+`~/\.,";:]}[{\'</string>
+    <string name="sign_in_activity_sign_up_button">Sign Up</string>
+    <string name="sign_in_activity_sign_in_button">Sign In</string>
+    <string name="sign_in_activity_button_forgot">Forgot your password?</string>
 </resources>

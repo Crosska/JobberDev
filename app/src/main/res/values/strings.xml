@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Jobber</string>
+    <string name="sign_in_activity_error_no_login">Пожалуйста, укажите логин</string>
+    <string name="sign_in_activity_error_no_password">Пожалуйста, укажите пароль</string>
+    <string name="sign_in_activity_error_no_data">Пожалуйста, введите данные для входа</string>
 </resources>

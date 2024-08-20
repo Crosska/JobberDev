@@ -16,6 +16,7 @@
         android:text="JOBBER"
         android:textColor="@color/main_semi_dark"
         android:textSize="55sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -48,12 +49,9 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/sign_in_activity_cardview_log_data"
+        style="@style/MainCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardBackgroundColor="@color/main_light"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -70,18 +68,23 @@
 
 
             <EditText
+                android:id="@+id/sign_in_activity_edittext_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="username"
                 android:fontFamily="@font/kanit_cyrillic"
                 android:hint="login"
+                android:inputType="text"
                 android:padding="15dp"
                 android:textColor="@color/main_dark"
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/sign_in_activity_edittext_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:autofillHints="password"
                 android:fontFamily="@font/kanit_cyrillic"
                 android:hint="password"
                 android:inputType="textPassword"
@@ -101,6 +104,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_weight="0.5"
                     android:fontFamily="@font/kanit_cyrillic"
+                    android:onClick="signUpButtonPressed"
                     android:text="Sing Up"
                     android:textColor="@color/main_light"
                     android:textSize="15sp"
@@ -113,6 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:fontFamily="@font/kanit_cyrillic"
+                    android:onClick="signInButtonPressed"
                     android:text="Sign In"
                     android:textColor="@color/main_light"
                     android:textSize="15sp"
@@ -123,16 +128,42 @@
 
             <TextView
                 android:id="@+id/sign_in_activity_button_forgot"
+                style="@style/MainTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:onClick="forgotPasswordButtonPressed"
                 android:paddingTop="15dp"
-                android:text="Forgot your password?"
-                android:textAlignment="center"
-                android:textColor="@color/main_semi_dark"
-                android:textSize="18sp" />
+                android:text="Forgot your password?" />
 
         </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sign_in_activity_cardview_error"
+        style="@style/MainCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_activity_cardview_log_data"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/sign_in_activity_textview_error"
+            style="@style/MainTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="TEST.TEST.TEST.TEST TEST TEST TEST TEST TEST"
+            android:textColor="@color/main"
+            android:textStyle="bold" />
 
     </com.google.android.material.card.MaterialCardView>
 

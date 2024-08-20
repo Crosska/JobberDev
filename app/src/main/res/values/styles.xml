@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainCardView">
+        <item name="android:layout_margin">15dp</item>
+        <item name="cardCornerRadius">25dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="backgroundColor">@color/main_light</item>
+    </style>
+
+    <style name="MainTextView">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/main_semi_dark</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
